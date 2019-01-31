@@ -1,0 +1,21 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <div class="row news">
+        {% for post in posts.reverse %}
+            <div class="col-12 col-12">
+                <!-- > <img src="/static/images/img1.jpg" alt="Picture of Rango" /><!-->
+                <div class="date">
+                    {{ post.published_date }}
+                </div>
+                <p>Нравится: {{ post.likes }}</p>
+                <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+                <img class="img-post img-thumbnail img-responsive " src="{{ post.img.url }}">
+                <p>{{ post.text|truncatewords:50 }}</p>
+                <a type="button" class="btn btn-dark" href="{% url 'post_detail' pk=post.pk %}">Читать дальше
+                    &#x2192;</a>
+                <hr>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

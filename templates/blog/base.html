@@ -1,0 +1,51 @@
+{% load static %}
+<html>
+<head>
+    <title>Я бухгалтер</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+</head>
+<body>
+<nav class="navbar navbar-expand-sm navbar-dark page-header" data-toggle="affix">
+    <div class="mx-auto d-sm-flex d-block flex-sm-nowrap">
+        <a class="large-a1 navbar-brand" href=/>Я бухгалтер | </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample11"
+                aria-expanded="false" aria-label="Toggle navigation">
+        </button>
+        <div class="collapse navbar-collapse text-center" id="navbarsExample11">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href=/admin class="nav-link nav-link-menu">Войти | </a>
+                </li>
+                <li class="nav-item">
+                    <a href=/post/new class="nav-link nav-link-menu">Создать статью | </a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://pb.nalog.ru/index.html" class="text-header nav-link nav-link-menu">Прозрачный
+                        бизнес | </a>
+                </li>
+                <li class="nav-item">
+                    <a href=/INN class="text-header nav-link nav-link-menu">Узнай всё</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="content container">
+    <div class="row">
+        <div class="col-sm-11">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+</div>
+</body>
+</html>

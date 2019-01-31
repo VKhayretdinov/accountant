@@ -1,0 +1,21 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="row news">
+        <div class=" col-xs-12 col-sm-12">
+            {% if post.published_date %}
+                <div class="date">
+                    {{ post.published_date }}
+                </div>
+            {% endif %}
+            <h1 class="main-news">{{ post.title }}</h1>
+            <img class="img-post img-thumbnail img-responsive" src="{{ post.img.url }}">
+            <p class="main-news">{{ post.text|linebreaksbr }}</p>
+            <hr>
+            <a class="" href="{% url 'post_add_like' pk=post.pk %}">
+                <img alt="Нравится" src="{% static '/images/index.png' %}" width="45" height="45">
+            </a>
+        </div>
+    </div>
+{% endblock %}

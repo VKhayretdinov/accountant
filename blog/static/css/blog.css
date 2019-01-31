@@ -1,0 +1,66 @@
+body {
+    background-color: #f6f6f6;
+}
+
+h1, h2 {
+    color: #303030;
+}
+
+
+a {
+    color: #303030;
+}
+
+a:hover {
+    color: #818181;
+    text-decoration: none;
+}
+
+p {
+    font-size: 16px;
+}
+
+.p-inn {
+
+}
+
+.news {
+    margin: 30px !important;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Параметры тени */
+}
+
+.page-header {
+    background-color: black;
+}
+
+.nav-menu {
+    color: #f6f6f6 !important;
+}
+
+.large-a1 {
+    font-size: 50px;
+}
+
+.nav-link-menu {
+    font-size: 30px;
+}
+
+.right-acc {
+    font-size: 20px;
+}
+
+.right-acc1 {
+    font-size: 30px;
+}
+
+hr {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.img-post {
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
